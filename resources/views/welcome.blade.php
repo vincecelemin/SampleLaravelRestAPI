@@ -36,10 +36,18 @@
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
+    <h3>Available Routes</h3>
+    <pre>
++--------+----------+------------+------+----------------------------------------------+------------+
+| Domain | Method   | URI        | Name | Action                                       | Middleware |
++--------+----------+------------+------+----------------------------------------------+------------+
+|        | GET|HEAD | /          |      | Closure                                      | web        |
+|        | POST     | todos      |      | App\Http\Controllers\TodosController@store   | web        |
+|        | GET|HEAD | todos      |      | App\Http\Controllers\TodosController@index   | web        |
+|        | DELETE   | todos/{id} |      | App\Http\Controllers\TodosController@destroy | web        |
+|        | GET|HEAD | todos/{id} |      | App\Http\Controllers\TodosController@show    | web        |
+|        | PUT      | todos/{id} |      | App\Http\Controllers\TodosController@update  | web        |
++--------+----------+------------+------+----------------------------------------------+------------+
+    </pre>
     </body>
 </html>
